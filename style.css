@@ -1,0 +1,525 @@
+/*************************
+Theme Name: 75KiloTheme
+Author: Malin Hanak
+Description: Very pasic template
+Version: 0.0.1
+*************************/
+
+/*************************
+       Globals
+*************************/
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+  margin:0;
+  padding:0;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+
+p { margin:0; }
+/**************************************
+    Override of default bootstrap
+ **************************************/
+
+@media (min-width: 1200px) {
+  main {
+    width: 970px;
+  }
+}
+
+
+/*************************
+       Masthead for nav
+ *************************/
+
+.blog-masthead {
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width:100%;
+  height:300px;
+
+  background: url("img/header.jpg");
+  background-size:100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+}
+.blog-nav {
+  width:100%;
+  padding:15px 0;
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  font-family: 'Montserrat', sans-serif;
+  font-size:11px;
+  text-transform:uppercase;
+  font-weight:500;
+  text-decoration: none;
+}
+
+/* Nav links */
+.blog-nav-item {
+  align-self:center;
+  padding: 10px;
+  color: #cdddeb;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #000;
+  text-decoration: none;
+}
+
+.blog-nav li {
+    padding: 10px;
+    list-style: none;
+}
+.blog-nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+/************************************
+      Blog main
+ ***********************************/
+ main {
+   width:50%;
+   display:flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   margin:50px auto 0 auto ;
+   padding:15px 15px;
+ }
+  /************************************
+        Blog about section
+   ***********************************/
+  #blog-about-section {
+    width:100%;
+    height:40vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    color:#fff;
+    background:#294F6D;
+  }
+  #blog-about-section section:first-of-type {
+    width:80%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #blog-about-section section:first-of-type > img.profile-img {
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    padding:2px;
+    background:#294F6D;
+    border: 8px solid #fff;
+  }
+  #blog-about-section .blog-article-aboutme {
+    width:300px;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self:stretch;
+
+    margin-right:30px;
+    margin-left:30px;
+  }
+  #blog-about-section h4 {
+    width:100%;
+    margin-bottom:8px;
+    padding-bottom:10px;
+
+    color:#d7e6f2;
+    border-bottom:1px solid #49779b;
+
+    font-family: 'Raleway', sans-serif;
+    font-size:18px;
+    text-transform:uppercase;
+    text-align:center;
+  }
+  #blog-about-section .blog-article-aboutme p {
+    max-height:120px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding:0 8px;
+
+    font-family: 'Raleway', sans-serif;
+    font-size:13px;
+    text-align:justify;
+  }
+  #blog-about-section .blog-article-categories, .blog-article-archive {
+    width:400px;
+    align-self:stretch;
+    max-height:120px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding:0 8px;
+    margin-right:auto;
+    margin-left:30px;
+  }
+  #blog-about-section .blog-article-categories ol, .blog-article-archive ol {
+    list-style: none;
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  #blog-about-section .blog-article-categories ol > li, .blog-article-archive ol > li {
+    border-radius:10px;
+    background:#49779b;
+    padding:3px 5px 5px 5px;
+    margin-right:5px;
+    margin-bottom:5px;
+  }
+  #blog-about-section .blog-article-categories ol > li a, .blog-article-archive ol > li a {
+    color:#000;
+    font-family: 'Raleway', sans-serif;
+    font-size:12px;
+    text-decoration:none;
+  }
+  #single-post-page .blog-post {
+    margin-bottom:20px;
+  }
+  /************************************
+        Webkit scroller
+   ***********************************/
+   ::-webkit-scrollbar {
+     width: 5px;
+ }
+
+ ::-webkit-scrollbar-track {
+     background-color:transparent;
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background-color:#49779b;
+     border-radius:5px;
+ }
+/************************************
+      Blog name and description
+ ***********************************/
+
+.blog-header {
+  margin: 80px auto 90px 50px;
+}
+
+.blog-title {
+  margin-bottom: -27px;
+
+  font-family: 'Abril Fatface', cursive;
+  font-size: 90px;
+  font-weight: normal;
+}
+.blog-title a {
+  color:#fff;
+  text-decoration:none;
+}
+.blog-description {
+  width:100%;
+  padding:8px 8px;
+
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom:1px solid #fff;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight:500;
+  font-size: 12px;
+  text-transform:uppercase;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.pager {
+  list-style: none;
+  margin-bottom: 60px;
+  background:#294F6D;
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-size:18px;
+  text-transform:uppercase;
+}
+.pager > li > a {
+  text-decoration:none;
+  color:#d7e6f2;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  width:100%;
+  margin-bottom: 60px;
+}
+.blog-post > p {
+  text-align:justify;
+  color:#444;
+
+  font-family: 'Raleway', sans-serif;
+  font-size:13px;
+  line-height:15px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  padding-bottom:8px;
+  color:#294F6D;
+  border-bottom:1px solid #294F6D;
+
+  font-family: 'Raleway', sans-serif;
+  font-size:24px;
+  text-transform:none;
+}
+.blog-post-title a {
+  color:#294F6D;
+  text-decoration:none;
+}
+.comments-title {
+  font-family: 'Raleway', sans-serif;
+  font-size:19px;
+  text-transform:uppercase;
+  color:#7DA3B7;
+}
+.blog-post-meta {
+  margin-bottom: 10px;
+  color: #2F3539;
+  font-family: 'Raleway', sans-serif;
+  font-size:12px;
+}
+.blog-post-meta a {
+  color: #103F59;
+  text-decoration:none;
+}
+.blog-post-excerpt > p {
+  font-family: 'Noto Serif JP', sans-serif;
+  font-style:italic;
+  font-size:14px;
+  text-align:justify;
+  color:#60686C;
+  margin: 0 30px;
+}
+.comment-list {
+  list-style: none;
+}
+.vcard .avatar {
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  border: 3px solid #294F6D;
+  margin-right:15px;
+}
+.comment-body {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.comment-body .vcard {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: #2F3539;
+  font-family: 'Raleway', sans-serif;
+  font-size:12px;
+}
+.says {
+  margin-left:5px;
+}
+.comment-meta {
+  margin-left:50px;
+}
+.comment-meta a {
+  color: #2F3539;
+  font-family: 'Raleway', sans-serif;
+  font-size:11px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+.comment-body > p {
+  margin-left:50px;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-style:normal;
+  font-size:12px;
+  text-align:justify;
+  color:#60686C;
+}
+.reply {
+  margin-left:50px;
+  margin-top:10px;
+  border-radius:2px;
+  background:#49779b;
+  padding:3px 5px 5px 5px;
+}
+.reply a {
+  color:#fff;
+  font-family: 'Raleway', sans-serif;
+  font-size:11px;
+  text-transform:uppercase;
+  text-decoration:none;
+}
+#reply-title {
+  font-family: 'Raleway', sans-serif;
+  font-size:16px;
+  text-transform:uppercase;
+  color:#98bfd3;
+  margin-top:10px;
+}
+.logged-in-as {
+  font-family: 'Raleway', sans-serif;
+  font-size:11px;
+  text-transform:none;
+}
+.logged-in-as a {
+  color: #2F3539;
+  text-decoration:none;
+}
+.logged-in-as a:last-of-type {
+  color: #ef325b;
+  text-decoration:none;
+}
+.comment-form-comment {
+  width:400px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.comment-form-comment label {
+  width:100%;
+  background: #98bfd3;
+  font-family: 'Raleway', sans-serif;
+  font-size:16px;
+  text-transform:uppercase;
+  color:##294F6D;
+  padding:10px 0 10px 10px;
+  margin-top:15px;
+}
+.comment-form-comment textarea#comment {
+  width:100%!important;
+  font-family: 'Raleway', sans-serif;
+  font-size:13px;
+  text-transform:none;
+  color:#294F6D;
+  padding:4px 4px;
+}
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+.form-submit #submit {
+  padding:10px 10px;
+  background:#294F6D;
+  color:#fff;
+  margin-top:10px;
+  border-radius: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-size:13px;
+  text-transform:none;
+  border:none;
+}
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 40px 0;
+  font-family: 'Raleway', sans-serif;
+  color: #999;
+  text-align: center;
+  background-color: #D1DBE0;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-space-around;
+  align-items: center;
+}
+.blog-footer p {
+  margin-left:20px;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size:12px;
+  text-transform:none;
+  margin-right:20px;
+  margin-left:auto;
+}
+
+.blog-footer p:last-child a {
+  color:#000;
+  text-decoration:none;
+}
