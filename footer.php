@@ -2,7 +2,7 @@
 <?php get_template_part( 'about'); ?>
 
    <footer class="blog-footer">
-     <p>Blog was created by Malin Hanak </p>
+     <p>Blog was created by Simon Appeltofft </p>
      <p>
        <a href="#">Back to top</a>
      </p>
